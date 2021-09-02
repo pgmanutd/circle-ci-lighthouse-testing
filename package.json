@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:lh-ci": "rimraf .lighthouseci/ && LIGHTHOUSE_CI_PORT=3000 lhci --config=./.lighthouserc.js autorun"
   },
   "dependencies": {
     "next": "11.1.2",
@@ -14,9 +15,12 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.8.1",
     "@types/react": "17.0.19",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
+    "puppeteer": "^10.2.0",
+    "rimraf": "^3.0.2",
     "typescript": "4.4.2"
   }
 }
