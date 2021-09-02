@@ -9,7 +9,7 @@ module.exports = {
       settings: {
         chromeFlags: [
           '--headless',
-          'CI' in process.env && '--no-sandbox',
+          'CI' in process.env && '--no-sandbox –-disable-setuid-sandbox',
         ].filter(Boolean),
       },
       numberOfRuns: 1,
