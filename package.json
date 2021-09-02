@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "PORT=8080 next start",
     "lint": "next lint",
-    "test:lh-ci": "rimraf .lighthouseci/ && LIGHTHOUSE_CI_PORT=3000 lhci --config=./.lighthouserc.js autorun"
+    "test:lh-ci": "rimraf .lighthouseci/ && LIGHTHOUSE_CI_PORT=8080 lhci --config=./.lighthouserc.js autorun"
   },
   "dependencies": {
     "next": "11.1.2",
