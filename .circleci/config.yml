@@ -24,6 +24,8 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      - puppeteer/install
+
       - run:
           name: lighthouse
           command: yarn test:lh-ci
